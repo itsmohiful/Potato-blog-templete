@@ -1,0 +1,1192 @@
+@import url("./fonts.css");
+@import url("./global.css");
+body {
+  background: #fff;
+}
+
+/*=============*/
+/*======HEADER START=======*/
+header {
+  position: relative;
+}
+
+header .main-nav {
+  height: 70px;
+  width: 100%;
+  background: var(--higher-color);
+}
+
+header .main-nav nav {
+  /*mobile search*/
+}
+
+header .main-nav nav a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .main-nav nav a img {
+  height: 60px;
+  width: 120px;
+  margin: 0 100px;
+  padding: 10px 0;
+  margin-top: 5px;
+}
+
+header .main-nav nav #check {
+  display: none;
+}
+
+header .main-nav nav .checkbtn {
+  float: right;
+  margin: 20px 0;
+  margin-right: 50px;
+  color: var(--primary-color);
+  width: 35px;
+  outline: none;
+  font-size: 27px;
+  border: #fff;
+  border-radius: 3px;
+  display: none;
+  margin-top: 8px;
+}
+
+header .main-nav nav ul {
+  float: right;
+  margin-right: 2rem !important;
+  list-style: none;
+  margin-top: -5px;
+}
+
+header .main-nav nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  text-transform: uppercase;
+  font-family: var(--roboto);
+}
+
+header .main-nav nav ul li a {
+  color: #fff;
+  padding: 26px 8px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .main-nav nav ul li .active,
+header .main-nav nav ul li a:hover {
+  background: var(--secondery-color);
+}
+
+header .main-nav nav .search2-logo {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  margin-left: 20px;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  outline: none;
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .main-nav nav .search2-logo:hover {
+  background: #fff;
+  color: var(--primary-color);
+}
+
+header .main-nav nav .search2-place {
+  width: 75%;
+  height: 40px;
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+
+header .main-nav nav .search2 {
+  width: 20%;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  padding: 0 8px;
+  height: 40px;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+header .main-nav nav .log-in {
+  margin-left: 30px;
+  width: 5.3rem;
+  padding: 5px 0;
+  outline: none;
+  background: var(--secondery-color);
+  border: 1px solid var(--secondery-color);
+  color: #fff;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+header .main-nav nav .log-in:hover {
+  background: #fff;
+  color: var(--secondery-color);
+}
+
+header .main-nav nav .search {
+  display: none;
+}
+
+header .main-nav nav .search .search-bar {
+  width: 82%;
+  height: 35px;
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+
+header .main-nav nav .search .btn-search {
+  width: 18%;
+  height: 35px;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  header .main-nav nav a img {
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 1065px) {
+  header .main-nav {
+    height: 60px;
+  }
+  header .main-nav nav a img {
+    margin: 0 50px;
+  }
+  header .main-nav nav .checkbtn {
+    display: block;
+  }
+  header .main-nav nav #check:checked ~ ul {
+    left: 0;
+  }
+  header .main-nav nav ul {
+    z-index: 999999;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: var(--higher-color);
+    padding-left: 10%;
+    padding-top: 2rem;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    left: -100%;
+  }
+  header .main-nav nav ul li {
+    display: block;
+    line-height: 60px;
+  }
+  header .main-nav nav ul li a {
+    padding: 10px 15px;
+  }
+  header .main-nav nav ul li .active,
+  header .main-nav nav ul li a:hover {
+    background: none;
+    color: var(--primary-color);
+  }
+  header .main-nav nav .search2-logo {
+    display: none;
+  }
+  header .main-nav nav .log-in {
+    margin-left: 2%;
+  }
+  header .main-nav nav .search {
+    display: block;
+    margin-left: -8%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  header .main-nav nav a img {
+    margin: 0 30px;
+  }
+}
+
+/*======HEADER END=======*/
+/*======Log-IN-page-start=======*/
+main section .log-in-page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(255, 255, 255, 0.2))), url("../img/ifal-tower.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.2)), url("../img/ifal-tower.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+main section .log-in-page .log-in {
+  width: 25rem;
+  height: 22rem;
+  position: absolute;
+  margin: 7% auto;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  left: 37%;
+  border: 1px solid var(--primary-color);
+}
+
+main section .log-in-page .log-in .user {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: var(--primary-color);
+  margin: 0 auto;
+  margin-top: -3rem;
+}
+
+main section .log-in-page .log-in .user i {
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.3rem !important;
+  font-size: 34px;
+}
+
+main section .log-in-page .log-in span {
+  color: var(--primary-color);
+  font-size: 32px;
+  font-family: var(--roboto);
+  font-weight: 700;
+  padding: 0rem 2rem;
+  text-align: center;
+}
+
+main section .log-in-page .log-in .log {
+  margin-top: 0.5rem;
+}
+
+main section .log-in-page .log-in .inner-log-in {
+  margin-top: 1.5rem;
+}
+
+main section .log-in-page .log-in .inner-log-in .input {
+  display: block;
+  width: 20rem;
+  height: 3rem;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  outline: none !important;
+  border: 2px solid var(--primary-color);
+  border-radius: 2rem;
+}
+
+main section .log-in-page .log-in .inner-log-in input {
+  padding-left: 1rem;
+}
+
+main section .log-in-page .log-in .inner-log-in .input:focus {
+  width: 21rem;
+}
+
+main section .log-in-page .log-in .inner-log-in button {
+  outline: none;
+  width: 20rem;
+  height: 3rem;
+  border: var(--primary-color);
+  border-radius: 2rem;
+  background: var(--primary-color);
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-family: var(--roboto);
+  font-weight: 700;
+  font-size: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main section .log-in-page .log-in .inner-log-in button:hover {
+  background: #fff;
+  color: var(--primary-color);
+  width: 21rem;
+}
+
+@media (max-width: 768px) {
+  main section .log-in-page .log-in {
+    width: 23rem;
+    height: 23rem;
+    margin: 12% auto;
+    left: 25%;
+  }
+  main section .log-in-page .log-in .user {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    margin-top: -3rem;
+  }
+  main section .log-in-page .log-in .user i {
+    margin-top: 2.3rem !important;
+    font-size: 34px;
+  }
+  main section .log-in-page .log-in span {
+    color: var(--primary-color);
+    font-size: 32px;
+    padding: 0rem 2rem;
+  }
+  main section .log-in-page .log-in .log {
+    margin-top: 0.5rem;
+  }
+  main section .log-in-page .log-in .inner-log-in {
+    margin-top: 1.5rem;
+  }
+  main section .log-in-page .log-in .inner-log-in .input {
+    width: 15rem;
+    height: 2rem;
+  }
+  main section .log-in-page .log-in .inner-log-in .input:focus {
+    width: 16rem;
+  }
+  main section .log-in-page .log-in .inner-log-in button {
+    width: 15rem;
+    height: 2rem;
+  }
+  main section .log-in-page .log-in .inner-log-in button:hover {
+    width: 16rem;
+  }
+}
+
+@media (max-width: 575px) {
+  main section .log-in-page .log-in {
+    width: 20rem;
+    height: 19rem;
+    margin: 25% auto;
+    left: 8%;
+  }
+  main section .log-in-page .log-in .inner-log-in .input {
+    width: 15rem;
+    height: 2rem;
+  }
+  main section .log-in-page .log-in .inner-log-in .input:focus {
+    width: 16rem;
+  }
+  main section .log-in-page .log-in .inner-log-in button {
+    width: 15rem;
+    height: 2rem;
+  }
+  main section .log-in-page .log-in .inner-log-in button:hover {
+    width: 16rem;
+  }
+}
+
+@media (max-width: 360px) {
+  main section .log-in-page .log-in {
+    width: 14rem;
+    height: 19rem;
+    margin: 25% auto;
+    left: 15%;
+  }
+  main section .log-in-page .log-in .inner-log-in .input {
+    width: 11rem;
+    height: 2rem;
+  }
+  main section .log-in-page .log-in .inner-log-in .input:focus {
+    width: 12rem;
+  }
+  main section .log-in-page .log-in .inner-log-in button {
+    width: 11rem;
+    height: 2rem;
+  }
+  main section .log-in-page .log-in .inner-log-in button:hover {
+    width: 12rem;
+  }
+}
+
+/*======Log-IN-page-end=======*/
+/*======MAIN START=======*/
+/*=====SLIDER START========*/
+main {
+  position: relative;
+}
+
+main .header-part .slider {
+  width: 80%;
+  height: 25%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+main .header-part .slider .carousel .carousel-inner img {
+  height: 20rem;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+}
+
+main .filter {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1.2rem;
+  position: absolute;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-left: 39%;
+}
+
+main .filter .fil-btn {
+  padding: 8px 25px;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 25px;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-family: var(--roboto);
+}
+
+main .filter .fil-btn:hover {
+  background: #fff;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  main .header-part .slider {
+    width: 30rem;
+    height: 15rem;
+    margin: 0 auto;
+  }
+  main .filter {
+    margin-top: 6.5rem !important;
+    margin-left: 30%;
+  }
+}
+
+@media (max-width: 575px) {
+  main .header-part .slider {
+    width: 22rem;
+    height: 7rem;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin: 0 auto !important;
+  }
+  main .filter {
+    margin-top: 15rem !important;
+    margin-left: 13%;
+  }
+}
+
+@media (max-width: 360px) {
+  main .header-part .slider {
+    width: 18rem;
+    height: 4rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin: 0 auto !important;
+  }
+  main .filter {
+    margin-top: 17.3rem !important;
+    margin-left: 10%;
+  }
+}
+
+/*======SLIDER END=======*/
+/*=======BLOG SECTION START======*/
+main .blog-section {
+  margin-top: 4.8rem;
+  position: relative;
+}
+
+main .blog-section .main-post {
+  -webkit-transform: 0 !important;
+          transform: 0 !important;
+  margin-bottom: 2rem;
+}
+
+main .blog-section .main-post .post a img {
+  width: 100%;
+  height: 22rem;
+}
+
+main .blog-section .main-post .post-des {
+  margin: 0 1rem;
+  margin-top: -20rem;
+  -webkit-filter: brightness(1.3);
+          filter: brightness(1.3);
+  color: #fff;
+}
+
+main .blog-section .main-post .post-des a {
+  text-decoration: none;
+}
+
+main .blog-section .main-post .post-des a span {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 3px 8px;
+  font-family: var(--roboto);
+  font-weight: 600;
+}
+
+main .blog-section .main-post .post-des a h6 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: var(--primary-color);
+  margin-top: 10rem !important;
+}
+
+main .blog-section .main-post .post-des a h3 {
+  color: #fff;
+  font-weight: 600;
+}
+
+main .blog-section .main-post .post-des a p {
+  color: #fff;
+  display: none;
+  font-weight: 700;
+}
+
+main .blog-section .main-post:hover .post-des h6 {
+  margin-top: 6.5rem !important;
+}
+
+main .blog-section .main-post:hover .post-des p {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  main .blog-section {
+    margin-top: 11rem;
+  }
+  main .blog-section .main-post {
+    margin-bottom: 4rem;
+  }
+  main .blog-section .main-post h3 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  main .blog-section {
+    margin-top: 18.4rem;
+  }
+  main .blog-section .main-post {
+    margin-bottom: 1rem;
+  }
+  main .blog-section .main-post h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 375px) {
+  main .blog-section {
+    margin-top: 20.5rem;
+  }
+  main .blog-section .main-post {
+    margin-bottom: 1rem;
+  }
+}
+
+/*======BLOG SECTION END=======*/
+/*======MAIN END=======*/
+/*======BLOG DETAILS PAGE START=======*/
+main {
+  /*======blog descripton START=======*/
+  /*======blog descripton end=======*/
+  /*======comment section start=======*/
+  /*======comment section end=======*/
+}
+
+main section .post-details .post-imgs {
+  width: 95% !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main section .post-details .post-imgs img {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main section .post-details .post-word {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -8rem;
+  color: #fff;
+  text-align: center;
+  font-family: var(--roboto);
+}
+
+main section .post-details .post-word .subject {
+  background: var(--primary-color);
+  padding: 4px 12px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+main section .post-details .post-word a {
+  text-decoration: none;
+}
+
+main section .post-details .post-word a img {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+main section .post-details .post-word a p {
+  display: inline-block;
+  color: #fff;
+  padding-left: 10px;
+}
+
+main section .post-details .post-word p {
+  display: inline-block;
+  color: #fff;
+  padding-left: 10px;
+}
+
+main section .post-details .post-word p span {
+  padding-right: 5px;
+}
+
+main section .blog-description {
+  background: #f2feff;
+  width: 65%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+main section .blog-description h4 {
+  font-family: var(--roboto);
+  font-size: 28px;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+main section .blog-description img {
+  width: 35rem;
+  height: 22rem;
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main section .blog-description .img-right {
+  float: right !important;
+}
+
+main section .blog-description .img-left {
+  float: left !important;
+}
+
+main section .blog-description .end {
+  margin-right: auto;
+}
+
+main section .blog-description P {
+  font-family: var(--roboto);
+  font-size: 22px;
+}
+
+main section .blog-description h5 {
+  font-size: 25px;
+  font-family: var(--roboto);
+  font-weight: 600;
+  padding: 1rem 0;
+}
+
+main section .container .comment {
+  background: #f2feff;
+  width: 70%;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+main section .container .comment h3 {
+  background: #4F508B;
+  font-family: var(--roboto);
+  font-weight: 600;
+  color: #fff;
+  padding: 8px 15px;
+}
+
+main section .container .comment p {
+  font-family: var(--roboto);
+  font-weight: 600;
+  margin: 15px 0px;
+  margin-left: 20px;
+}
+
+main section .container .comment p span {
+  padding-right: 10px;
+}
+
+main section .container .comment .comment-inner {
+  width: 100%;
+  height: 7.6rem;
+  border-bottom: 1px solid #ddd;
+}
+
+main section .container .comment .comment-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+main section .container .comment .comment-inner .img-cm {
+  width: 10%;
+  margin-top: -2px;
+  float: left;
+  margin: 0.5rem;
+  height: 4rem;
+}
+
+main section .container .comment .comment-inner .comment-submit {
+  float: right;
+  width: 85%;
+  margin-top: 8px;
+  height: 4rem;
+}
+
+main section .container .comment .comment-inner .comment-submit input {
+  width: 100%;
+  height: 4rem;
+  outline: none;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+}
+
+main section .container .comment .comment-inner .comment-submit .post-btn {
+  outline: none;
+  border: 1px solid #ddd;
+  background: #4F508B;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 3px;
+  margin-top: 8px;
+  margin-right: 1rem;
+  float: right;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main section .container .comment .comment-inner .comment-submit .post-btn:hover {
+  background: #ddd;
+  color: #222;
+}
+
+main section .container .comment .share .share-icon {
+  margin-bottom: 5px;
+  margin-left: 1rem;
+}
+
+main section .container .comment .share .share-icon a {
+  padding: 0 8px;
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #4F508B;
+}
+
+main section .container .comment .share .share-icon a:hover {
+  color: #a1a1a8;
+}
+
+@media (max-width: 768px) {
+  main section .post-details .post-word {
+    margin-top: -6.5rem;
+  }
+  main section .post-details .post-word h1 {
+    font-size: 24px;
+    padding-top: 7px;
+  }
+  main section .post-details .post-word a {
+    text-decoration: none;
+  }
+  main section .post-details .post-word a img {
+    width: 2rem;
+    height: 2rem;
+  }
+  main section .blog-description img {
+    width: 23rem;
+    height: 18rem;
+  }
+}
+
+@media (max-width: 575px) {
+  main {
+    /**comment section***/
+  }
+  main section .post-details .post-imgs {
+    width: 100% !important;
+  }
+  main section .post-details .post-word {
+    margin-top: -7.2rem;
+  }
+  main section .post-details .post-word h1 {
+    font-size: 18px;
+    padding-top: 7px;
+  }
+  main section .post-details .post-word a img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  main section .post-details .post-word a p {
+    padding-left: 5px;
+  }
+  main section .post-details .post-word p {
+    padding-left: 5px;
+    margin-bottom: 0 !important;
+  }
+  main section .post-details .post-word p span {
+    padding-right: 3px;
+  }
+  main section .blog-description {
+    width: 95%;
+  }
+  main section .blog-description h4 {
+    font-size: 24px;
+    padding-bottom: 0.7rem;
+  }
+  main section .blog-description img {
+    width: 19rem;
+    height: 12rem;
+  }
+  main section .blog-description P {
+    font-size: 20px;
+  }
+  main section .blog-description h5 {
+    font-size: 21px;
+  }
+  main section .container .comment {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  main section .post-details .post-imgs {
+    width: 100% !important;
+  }
+  main section .post-details .post-word {
+    margin-top: -7.5rem;
+  }
+  main section .post-details .post-word h1 {
+    font-size: 16px;
+    padding-top: 7px;
+  }
+  main section .post-details .post-word a img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  main section .post-details .post-word a p {
+    padding-left: 5px;
+  }
+  main section .post-details .post-word p {
+    padding-left: 5px;
+    margin-bottom: 0 !important;
+  }
+  main section .post-details .post-word p span {
+    padding-right: 3px;
+  }
+  main section .blog-description {
+    width: 95%;
+  }
+  main section .blog-description h4 {
+    font-size: 24px;
+    padding-bottom: 0.7rem;
+  }
+  main section .blog-description img {
+    width: 17rem;
+    height: 12rem;
+  }
+  main section .blog-description P {
+    font-size: 20px;
+  }
+  main section .blog-description h5 {
+    font-size: 21px;
+  }
+}
+
+/*======related post start=======*/
+main section .related-post-section {
+  border-top: 2px solid #718d9b;
+  margin-bottom: 1rem;
+}
+
+main section .related-post-section h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #4F508B;
+  font-family: var(--roboto);
+  margin-left: 1rem;
+}
+
+main section .related-post-section .related-post a {
+  text-decoration: none;
+}
+
+main section .related-post-section .related-post a img {
+  width: 100%;
+}
+
+main section .related-post-section .related-post a p {
+  color: #887d7d;
+}
+
+main section .related-post-section .related-post:hover {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+}
+
+/*======related post end=======*/
+/*======BLOG DETAILS PAGE END=======*/
+/*=====AUTHORS PAGE START========*/
+section .authors-section {
+  width: 70%;
+  background: #f2feff;
+  margin: 0 auto;
+  /*******author all post start******/
+  /*******author all post end******/
+}
+
+section .authors-section h2 {
+  font-family: var(--roboto);
+  font-weight: 700;
+  font-size: 45px;
+  text-align: center;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+}
+
+section .authors-section .author {
+  width: 100% !important;
+  margin-bottom: 5rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+section .authors-section .author .author-img {
+  float: left;
+}
+
+section .authors-section .author .author-img img {
+  width: 100%;
+  float: left;
+  border-radius: 5px;
+}
+
+section .authors-section .author .author-des a {
+  text-decoration: none;
+}
+
+section .authors-section .author .author-des a h3 {
+  font-family: var(--roboto);
+}
+
+section .authors-section .author .author-des P {
+  font-family: var(--roboto);
+}
+
+section .authors-section .author .author-des .profile a {
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+section .authors-section .author-post {
+  margin-top: -4rem;
+  padding-bottom: 6rem;
+}
+
+section .authors-section .author-post .author-post-img img {
+  width: 95%;
+  margin-top: 2.5rem;
+  padding-left: 1rem;
+}
+
+section .authors-section .author-post .author-post-des a {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+section .authors-section .author-post .author-post-des a span {
+  padding-right: 5px;
+  display: inline-block;
+  color: var(--third-color);
+}
+
+section .authors-section .author-post .author-post-des a p {
+  display: inline-block;
+}
+
+section .authors-section .author-post .author-post-des p {
+  display: inline;
+  margin-top: 1rem;
+}
+
+section .authors-section .author-post .author-post-des p span {
+  margin-right: 10px;
+  color: var(--third-color);
+}
+
+section .authors-section .author-post a {
+  text-decoration: none;
+}
+
+section .authors-section .author-post a h3 {
+  font-family: var(--roboto);
+  font-weight: 600;
+  color: var(--third-color);
+  letter-spacing: 2px;
+}
+
+section .authors-section .author-post a p {
+  color: #222;
+}
+
+section .authors-section .author-post button {
+  outline: none;
+  border: 1px solid var(--third-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  background: var(--third-color);
+  color: #fff;
+  font-family: var(--roboto);
+  font-weight: 600;
+  display: inline-block;
+  float: left;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+section .authors-section .author-post button:hover {
+  background: #fff;
+  color: var(--third-color);
+}
+
+section .authors-section .author-post .love {
+  margin-right: 2rem;
+}
+
+section .authors-section .author-post .love i {
+  color: red;
+  padding-right: 5px;
+  font-size: 18px;
+}
+
+@media (max-width: 575px) {
+  section .authors-section {
+    width: 80%;
+  }
+  section .authors-section .author {
+    margin-bottom: 2rem;
+  }
+  section .authors-section .author .author-img img {
+    margin-bottom: 2rem;
+  }
+}
+
+/*======AUTHORS PAGE END=======*/
+/*======FOOTER START=======*/
+footer {
+  background: var(--higher-color);
+  color: #fff;
+}
+
+footer .main-footer {
+  border-bottom: 2px solid #fff;
+}
+
+footer .main-footer h5 {
+  margin-bottom: 20px;
+}
+
+footer .main-footer i {
+  margin-right: 12px;
+}
+
+footer .main-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .main-footer a:hover {
+  color: var(--primary-color);
+}
+
+footer section p a {
+  text-decoration: none !important;
+  color: var(--primary-color);
+}
+
+footer section p a:hover {
+  color: #fff;
+}
+
+/*======FOOTER END=======*/
+/*=============*/
+/*# sourceMappingURL=style.css.map */

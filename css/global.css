@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --roboto:"Roboto",cursive;
+    --primary-color:#69D6D3;
+    --secondery-color:#51B3AF;
+    --higher-color:#1E4356;
+    --third-color:#1d5ea5;
+
+}
+/* .active{
+    background:#555;
+} */
+.uppercase{
+    text-transform: uppercase !important;
+}
+.roboto{
+    font-family: var(--roboto);
+}
+
+
+.top{
+    margin-top:-1rem;
+}
+
+.right{
+    float:right;
+}
+
+button:hover,
+button:active,
+button:focus,
+.btn:active,
+.btn:hover{
+    outline: 0 !important;
+}
