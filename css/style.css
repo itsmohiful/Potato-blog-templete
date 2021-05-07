@@ -16,10 +16,6 @@ header .main-nav {
   background: var(--higher-color);
 }
 
-header .main-nav nav {
-  /*mobile search*/
-}
-
 header .main-nav nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -29,6 +25,8 @@ header .main-nav nav a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  float: left;
+  width: 20%;
 }
 
 header .main-nav nav a img {
@@ -59,9 +57,10 @@ header .main-nav nav .checkbtn {
 
 header .main-nav nav ul {
   float: right;
+  width: 80%;
   margin-right: 2rem !important;
   list-style: none;
-  margin-top: -5px;
+  margin-top: -2.8rem;
 }
 
 header .main-nav nav ul li {
@@ -79,62 +78,74 @@ header .main-nav nav ul li a {
   transition: 0.3s;
 }
 
-header .main-nav nav ul li .active,
 header .main-nav nav ul li a:hover {
   background: var(--secondery-color);
 }
 
-header .main-nav nav .search2-logo {
-  width: 40px;
+header .main-nav nav .pc-search {
+  width: 80%;
+  float: right;
+  position: relative;
+}
+
+header .main-nav nav .pc-search .main-search {
+  float: left;
+  width: 80%;
+  margin-top: -3px;
+}
+
+header .main-nav nav .pc-search .main-search .search2-place {
+  width: 90%;
+  height: 40px;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  border-right: none !important;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+header .main-nav nav .pc-search .main-search .search2-logo {
+  width: 50px;
   height: 40px;
   color: #fff;
-  margin-left: 20px;
+  margin-left: -5px;
   background: var(--primary-color);
   border: 1px solid var(--primary-color);
-  border-radius: 50%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   outline: none;
   display: inline-block;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  position: absolute;
+  font-size: 20px;
 }
 
-header .main-nav nav .search2-logo:hover {
+header .main-nav nav .pc-search .main-search .search2-logo:hover {
   background: #fff;
   color: var(--primary-color);
 }
 
-header .main-nav nav .search2-place {
-  width: 75%;
-  height: 40px;
-  outline: none;
-  border: 1px solid var(--primary-color);
+header .main-nav nav .pc-search .div-log-in {
+  float: right;
+  margin-left: -1rem;
 }
 
-header .main-nav nav .search2 {
-  width: 20%;
-  background: var(--primary-color);
-  color: #fff;
-  font-weight: 600;
-  padding: 0 8px;
-  height: 40px;
-  outline: none;
-  border: 1px solid var(--primary-color);
-  border-radius: 5px;
-}
-
-header .main-nav nav .log-in {
-  margin-left: 30px;
-  width: 5.3rem;
-  padding: 5px 0;
+header .main-nav nav .pc-search .div-log-in .log-in {
+  margin-top: -2px;
+  height: 40px !important;
+  float: right !important;
+  width: 80px;
   outline: none;
   background: var(--secondery-color);
   border: 1px solid var(--secondery-color);
   color: #fff;
   border-radius: 3px;
+  text-transform: uppercase;
   font-weight: 600;
 }
 
-header .main-nav nav .log-in:hover {
+header .main-nav nav .pc-search .div-log-in .log-in:hover {
   background: #fff;
   color: var(--secondery-color);
 }
@@ -144,28 +155,30 @@ header .main-nav nav .search {
 }
 
 header .main-nav nav .search .search-bar {
-  width: 82%;
+  width: 70%;
   height: 35px;
   outline: none;
   border: 1px solid var(--primary-color);
+  margin-left: 5%;
 }
 
 header .main-nav nav .search .btn-search {
-  width: 18%;
+  width: 20%;
   height: 35px;
+  margin-right: 5%;
   outline: none;
   border: 1px solid var(--primary-color);
   background: var(--primary-color);
   color: #fff;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   header .main-nav nav a img {
     margin: 0 30px;
   }
 }
 
-@media (max-width: 1065px) {
+@media (max-width: 768px) {
   header .main-nav {
     height: 60px;
   }
@@ -189,6 +202,7 @@ header .main-nav nav .search .btn-search {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     left: -100%;
+    margin-top: 60px;
   }
   header .main-nav nav ul li {
     display: block;
@@ -197,16 +211,20 @@ header .main-nav nav .search .btn-search {
   header .main-nav nav ul li a {
     padding: 10px 15px;
   }
-  header .main-nav nav ul li .active,
   header .main-nav nav ul li a:hover {
     background: none;
     color: var(--primary-color);
   }
-  header .main-nav nav .search2-logo {
+  header .main-nav nav .pc-search .main-search {
     display: none;
   }
-  header .main-nav nav .log-in {
-    margin-left: 2%;
+  header .main-nav nav .pc-search .main-search .dev-log-in {
+    height: 10rem;
+  }
+  header .main-nav nav .pc-search .main-search .dev-log-in .log-in {
+    height: 10rem;
+    margin-top: 4rem !important;
+    float: left !important;
   }
   header .main-nav nav .search {
     display: block;
@@ -215,9 +233,15 @@ header .main-nav nav .search .btn-search {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1050px) {
   header .main-nav nav a img {
     margin: 0 30px;
+  }
+  header .main-nav nav .pc-search .main-search {
+    width: 65%;
+  }
+  header .main-nav nav .pc-search .main-search .dev-log-in {
+    float: left;
   }
 }
 
@@ -433,6 +457,11 @@ main {
   position: relative;
 }
 
+main .header-part {
+  width: 90%;
+  margin: 0 auto;
+}
+
 main .header-part .slider {
   width: 80%;
   height: 25%;
@@ -446,9 +475,9 @@ main .header-part .slider .carousel .carousel-inner img {
           filter: brightness(0.7);
 }
 
-main .filter {
-  margin: 0 auto;
+main .header-part .filter {
   text-align: center;
+  margin: 0 3rem;
   margin-top: 1.2rem;
   position: absolute;
   text-align: center;
@@ -463,40 +492,55 @@ main .filter {
       align-self: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin-left: 39%;
 }
 
-main .filter .fil-btn {
+main .header-part .filter a {
+  text-decoration: none;
+}
+
+main .header-part .filter .fil-btn {
   padding: 8px 25px;
   outline: none;
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   border-radius: 25px;
   background: var(--primary-color);
+  text-transform: uppercase;
   color: #fff;
   font-weight: 600;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  margin: 1rem 0.5rem !important;
+  letter-spacing: 2px;
   font-family: var(--roboto);
 }
 
-main .filter .fil-btn:hover {
+main .header-part .filter .fil-btn:hover {
   background: #fff;
   color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
+  main .header-part {
+    width: 90% !important;
+  }
   main .header-part .slider {
     width: 30rem;
     height: 15rem;
     margin: 0 auto;
   }
-  main .filter {
+  main .header-part .filter {
     margin-top: 6.5rem !important;
-    margin-left: 30%;
+  }
+  main .header-part .filter .fil-btn {
+    margin: 0.6rem 0.5rem !important;
+    letter-spacing: 1.5px;
   }
 }
 
 @media (max-width: 575px) {
+  main .header-part {
+    width: 100% !important;
+  }
   main .header-part .slider {
     width: 22rem;
     height: 7rem;
@@ -504,13 +548,20 @@ main .filter .fil-btn:hover {
     margin-right: 0 !important;
     margin: 0 auto !important;
   }
-  main .filter {
+  main .header-part .filter {
     margin-top: 15rem !important;
-    margin-left: 13%;
+  }
+  main .header-part .filter .fil-btn {
+    margin: 0.3rem 0.5rem !important;
+    letter-spacing: 0px;
+    padding: 8px 18px;
   }
 }
 
 @media (max-width: 360px) {
+  main .header-part {
+    width: 100% !important;
+  }
   main .header-part .slider {
     width: 18rem;
     height: 4rem !important;
@@ -518,23 +569,31 @@ main .filter .fil-btn:hover {
     margin-right: 0 !important;
     margin: 0 auto !important;
   }
-  main .filter {
+  main .header-part .filter {
     margin-top: 17.3rem !important;
-    margin-left: 10%;
+  }
+  main .header-part .filter .fil-btn {
+    padding: 6px 10px;
+    margin: 0.3rem 0.3rem !important;
   }
 }
 
 /*======SLIDER END=======*/
 /*=======BLOG SECTION START======*/
 main .blog-section {
-  margin-top: 4.8rem;
+  margin-top: 10.8rem;
   position: relative;
 }
 
 main .blog-section .main-post {
   -webkit-transform: 0 !important;
           transform: 0 !important;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+main .blog-section .main-post .post {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 
 main .blog-section .main-post .post a img {
@@ -544,10 +603,12 @@ main .blog-section .main-post .post a img {
 
 main .blog-section .main-post .post-des {
   margin: 0 1rem;
-  margin-top: -20rem;
+  margin-top: -18rem;
   -webkit-filter: brightness(1.3);
           filter: brightness(1.3);
+  overflow: hidden;
   color: #fff;
+  position: absolute;
 }
 
 main .blog-section .main-post .post-des a {
@@ -576,21 +637,22 @@ main .blog-section .main-post .post-des a h3 {
 
 main .blog-section .main-post .post-des a p {
   color: #fff;
-  display: none;
+  display: none !important;
   font-weight: 700;
 }
 
 main .blog-section .main-post:hover .post-des h6 {
-  margin-top: 6.5rem !important;
+  margin-top: 5.5rem !important;
 }
 
 main .blog-section .main-post:hover .post-des p {
-  display: block;
+  display: block !important;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
   main .blog-section {
-    margin-top: 11rem;
+    margin-top: 19rem;
   }
   main .blog-section .main-post {
     margin-bottom: 4rem;
@@ -602,7 +664,7 @@ main .blog-section .main-post:hover .post-des p {
 
 @media (max-width: 575px) {
   main .blog-section {
-    margin-top: 18.4rem;
+    margin-top: 32.4rem;
   }
   main .blog-section .main-post {
     margin-bottom: 1rem;
@@ -614,7 +676,7 @@ main .blog-section .main-post:hover .post-des p {
 
 @media (max-width: 375px) {
   main .blog-section {
-    margin-top: 20.5rem;
+    margin-top: 33.5rem;
   }
   main .blog-section .main-post {
     margin-bottom: 1rem;
@@ -642,6 +704,8 @@ main section .post-details .post-imgs {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
 }
 
 main section .post-details .post-imgs img {
@@ -660,10 +724,12 @@ main section .post-details .post-imgs img {
 main section .post-details .post-word {
   width: 100%;
   margin: 0 auto;
-  margin-top: -8rem;
+  margin-top: -8.2rem;
   color: #fff;
   text-align: center;
   font-family: var(--roboto);
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
 }
 
 main section .post-details .post-word .subject {
@@ -768,76 +834,100 @@ main section .container .comment {
   margin-bottom: 2rem;
 }
 
-main section .container .comment h3 {
-  background: #4F508B;
+main section .container .comment .comment-top {
+  background: #54558d;
   font-family: var(--roboto);
-  font-weight: 600;
   color: #fff;
   padding: 8px 15px;
+  margin-bottom: 1rem;
+}
+
+main section .container .comment .comment-top h3 {
+  font-weight: 600;
+}
+
+main section .container .comment .comment-top p {
+  margin-left: 0px;
+  padding: 0;
+  font-weight: none !important;
 }
 
 main section .container .comment p {
   font-family: var(--roboto);
-  font-weight: 600;
-  margin: 15px 0px;
   margin-left: 20px;
 }
 
 main section .container .comment p span {
-  padding-right: 10px;
+  padding: 10px 0px;
+  padding-bottom: 0px;
+  font-weight: 600;
+  color: #4F508B;
+  text-transform: uppercase;
 }
 
 main section .container .comment .comment-inner {
+  margin-top: -1rem;
   width: 100%;
   height: 7.6rem;
   border-bottom: 1px solid #ddd;
 }
 
-main section .container .comment .comment-inner img {
-  width: 100%;
-  height: 100%;
-}
-
-main section .container .comment .comment-inner .img-cm {
-  width: 10%;
-  margin-top: -2px;
-  float: left;
-  margin: 0.5rem;
-  height: 4rem;
-}
-
 main section .container .comment .comment-inner .comment-submit {
   float: right;
-  width: 85%;
+  width: 100%;
   margin-top: 8px;
-  height: 4rem;
+  padding: 0 10px;
 }
 
-main section .container .comment .comment-inner .comment-submit input {
+main section .container .comment .comment-inner .comment-submit textarea {
   width: 100%;
-  height: 4rem;
+  height: 8rem;
   outline: none;
   margin-right: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #696bdb;
 }
 
-main section .container .comment .comment-inner .comment-submit .post-btn {
+main section .container .comment .comment-inner .comment-submit .address {
+  width: 45%;
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 15px;
+}
+
+main section .container .comment .comment-inner .comment-submit .address h6 {
+  text-transform: uppercase;
+  color: #4F508B;
+}
+
+main section .container .comment .comment-inner .comment-submit .address input {
+  border: 1px solid #696bdb;
   outline: none;
-  border: 1px solid #ddd;
+  padding: 3px 8px;
+  width: 80%;
+}
+
+main section .container .comment .comment-inner .comment-submit button {
+  outline: none;
+  border: 1px solid #696bdb;
   background: #4F508B;
   color: #fff;
-  padding: 5px 15px;
+  padding: 5px 25px;
   border-radius: 3px;
-  margin-top: 8px;
+  margin-top: -3rem;
   margin-right: 1rem;
   float: right;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-main section .container .comment .comment-inner .comment-submit .post-btn:hover {
-  background: #ddd;
+main section .container .comment .comment-inner .comment-submit button:hover {
+  background: #fff;
   color: #222;
+}
+
+main section .container .comment .share p {
+  color: #4F508B;
+  font-weight: 600;
 }
 
 main section .container .comment .share .share-icon {
@@ -854,6 +944,16 @@ main section .container .comment .share .share-icon a {
 
 main section .container .comment .share .share-icon a:hover {
   color: #a1a1a8;
+}
+
+@media (max-width: 768px) {
+  main section .container .comment .comment-inner .comment-submit .address {
+    width: 42%;
+  }
+  main section .container .comment .comment-inner .comment-submit button {
+    padding: 5px 15px;
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 768px) {

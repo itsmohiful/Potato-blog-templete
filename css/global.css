@@ -12,9 +12,16 @@
     --third-color:#1d5ea5;
 
 }
-/* .active{
-    background:#555;
-} */
+.actives{
+    background:#fff !important;
+    color:var(--primary-color) !important;
+    transition: 0.3s;
+}
+
+.actives:hover{
+    background:var(--primary-color) !important;
+    color:#fff !important;
+}
 .uppercase{
     text-transform: uppercase !important;
 }
